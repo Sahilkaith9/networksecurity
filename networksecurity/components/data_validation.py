@@ -60,7 +60,7 @@ class DataValidation:
                 # file_path=os.path.dirname(drift_report_file_path)
                 # os.makedirs(file_path,exist_ok=True)
                 write_yaml_file(file_path=drift_report_file_path,content=report)
-                
+                return True
             except Exception as e:
                  raise NetworkSecurityException(e,sys)
      
