@@ -80,9 +80,8 @@ class DataValidation:
                dir_name=os.path.dirname(self.data_validation_config.valid_train_file_path)
                os.makedirs(dir_name,exist_ok=True)
 
-               if status:
-                    train_dataframe.to_csv(self.data_validation_config.valid_train_file_path,index=False,header=True)
-                    train_dataframe.to_csv(self.data_validation_config.valid_test_file_path,index=False,header=True)
+               train_dataframe.to_csv(self.data_validation_config.valid_train_file_path,index=False,header=True)
+               train_dataframe.to_csv(self.data_validation_config.valid_test_file_path,index=False,header=True)
                
                data_validation_artifacts=DataValidationArtifacts(
                     validation_status=status,
