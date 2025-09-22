@@ -5,7 +5,7 @@ import sys
 import os
 from networksecurity.components.data_validation import DataValidation
 from networksecurity.components.data_transformation import DataTransformation
-
+from networksecurity.components.model_trainer import ModelTrainer
 
 if __name__=="__main__":
     try:
@@ -15,5 +15,7 @@ if __name__=="__main__":
         validate_obj.initiate_data_validation()
         data_transformation=DataTransformation()
         data_transformation.initiate_data_transformation()
+        model_trainer=ModelTrainer()
+        model_trainer.initiate_model_trainer()
     except Exception as e:
         raise NetworkSecurityException(e,sys)
